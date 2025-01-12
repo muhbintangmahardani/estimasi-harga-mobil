@@ -3,6 +3,11 @@ import streamlit as st
 
 model = pickle.load(open('estimasi_mobil.sav', 'rb'))
 
+st.title('Universitas Bina Sarana Informatika')
+st.title('PROJECT MACHINE LEARNING : ESTIMASI HARGA MOBIL BEKAS
+MENGGUNAKAN ALGORITMA MODEL LINEAR REGRESSION, DECISION TREE REGRESSOR & DEPLOYMENT DI STREAMLIT.')
+st.title('Muh Bintang Mahardani (17225123)')
+st.title('Taufiq Ismail (17215032)')
 st.title('Estimasi Harga Mobil Bekas')
 
 # Input data dari pengguna
