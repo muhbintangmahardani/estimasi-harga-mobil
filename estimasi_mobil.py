@@ -18,11 +18,13 @@ st.text('Taufiq Ismail (17215032)')
 
 # Input data dari pengguna
 st.write("### Masukkan Data Mobil")
-year = st.number_input('Tahun Mobil', min_value=1900, step=1, format="%d")  # Changed min_value to 1900
-mileage = st.number_input('Kilometer Mobil (Km)', min_value=0, step=1, format="%d")
-tax = st.number_input('Pajak Mobil (Pounds)', min_value=0, step=1, format="%d")
-mpg = st.number_input('Konsumsi BBM Mobil (MPG)', min_value=0, step=1, format="%d")
-engineSize = st.number_input('Ukuran Mesin (L)', min_value=0, step=1, format="%d")
+
+# Set all inputs to 0 or empty (no pre-filled values)
+year = st.number_input('Tahun Mobil', min_value=1900, step=1, format="%d", value=0)  # Default is 0
+mileage = st.number_input('Kilometer Mobil (Km)', min_value=0, step=1, format="%d", value=0)
+tax = st.number_input('Pajak Mobil (Pounds)', min_value=0, step=1, format="%d", value=0)
+mpg = st.number_input('Konsumsi BBM Mobil (MPG)', min_value=0, step=1, format="%d", value=0)
+engineSize = st.number_input('Ukuran Mesin (L)', min_value=0, step=1, format="%d", value=0)
 
 # Prediksi Harga
 predict = ''
