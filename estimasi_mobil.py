@@ -1,27 +1,35 @@
 import pickle
 import streamlit as st
 
+# Load model
 model = pickle.load(open('estimasi_mobil.sav', 'rb'))
 
+# Judul Aplikasi
 st.title('Universitas Bina Sarana Informatika')
-st.title('PROJECT MACHINE LEARNING : ESTIMASI HARGA MOBIL BEKAS MENGGUNAKAN ALGORITMA MODEL LINEAR REGRESSION, DECISION TREE REGRESSOR & DEPLOYMENT DI STREAMLIT.')
-st.title('Muh Bintang Mahardani (17225123)')
-st.title('Taufiq Ismail (17215032)')
-st.title('Estimasi Harga Mobil Bekas')
+st.header('Project Machine Learning')
+st.subheader('Estimasi Harga Mobil Bekas')
+st.text('Menggunakan Algoritma:')
+st.text('- Linear Regression')
+st.text('- Decision Tree Regressor')
+st.text('- Deployment di Streamlit')
+st.text('Oleh:')
+st.text('Muh Bintang Mahardani (17225123)')
+st.text('Taufiq Ismail (17215032)')
 
 # Input data dari pengguna
-year = st.number_input('Input Tahun Mobil', min_value=0, step=1)
-mileage = st.number_input('Input Km Mobil', min_value=0.0, step=1.0)
-tax = st.number_input('Input Pajak Mobil', min_value=0.0, step=1.0)
-mpg = st.number_input('Input Konsumsi BBM Mobil', min_value=0.0, step=0.1)
-engineSize = st.number_input('Input Engine Size', min_value=0.0, step=0.1)
+st.write("### Masukkan Data Mobil")
+year = st.number_input('Tahun Mobil', min_value=0, step=1, format="%d")
+mileage = st.number_input('Kilometer Mobil (Km)', min_value=0.0, step=1.0, format="%.2f")
+tax = st.number_input('Pajak Mobil (Pounds)', min_value=0.0, step=1.0, format="%.2f")
+mpg = st.number_input('Konsumsi BBM Mobil (MPG)', min_value=0.0, step=0.1, format="%.1f")
+engineSize = st.number_input('Ukuran Mesin (L)', min_value=0.0, step=0.1, format="%.1f")
 
+# Prediksi Harga
 predict = ''
-
-# Validasi apakah semua input telah terisi
 if st.button('Estimasi Harga', disabled=(year == 0 or mileage == 0.0 or tax == 0.0 or mpg == 0.0 or engineSize == 0.0)):
     predict = model.predict(
         [[year, mileage, tax, mpg, engineSize]]
     )
-    st.write('Estimasi harga mobil bekas dalam Ponds : ', predict)
-    st.write('Estimasi harga mobil bekas dalam IDR (Juta) :', predict * 19000)
+    st.write('### Hasil Estimasi')
+    st.write(f'Estimasi harga mobil bekas dalam Pounds: **£{predict[0]:,.2f}**')
+    st.write(f'Estimasi harga mobil bekas dalam IDR (Juta): **Rp{(predict[0] * 19000) / 1_000_000:,.2f} Juta**')
