@@ -18,7 +18,7 @@ st.text('Taufiq Ismail (17215032)')
 
 # Input data dari pengguna
 st.write("### Masukkan Data Mobil")
-year = st.number_input('Tahun Mobil', min_value=0, step=1, format="%d")
+year = st.number_input('Tahun Mobil', min_value=1900, step=1, format="%d")  # Changed min_value to 1900
 mileage = st.number_input('Kilometer Mobil (Km)', min_value=0, step=1, format="%d")
 tax = st.number_input('Pajak Mobil (Pounds)', min_value=0, step=1, format="%d")
 mpg = st.number_input('Konsumsi BBM Mobil (MPG)', min_value=0, step=1, format="%d")
@@ -33,4 +33,3 @@ if st.button('Estimasi Harga', disabled=(year == 0 or mileage == 0 or tax == 0 o
     st.write('### Hasil Estimasi')
     st.write(f'Estimasi harga mobil bekas dalam Pounds: **£{int(predict[0]):,}**')
     st.write(f'Estimasi harga mobil bekas dalam IDR (Juta): **Rp{int(predict[0] * 19000) / 1_000_000:,} Juta**')
-
