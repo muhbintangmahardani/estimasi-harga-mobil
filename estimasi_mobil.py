@@ -26,22 +26,23 @@ add_bg_from_url(image_url)
 st.markdown(
     """
     <div style="text-align: center;">
-        <h1>Universitas Bina Sarana Informatika</h1>
-        <h2>Project Machine Learning</h2>
-        <h3>Estimasi Harga Mobil Bekas</h3>
+        <h1 style="margin-bottom: 5px;">Universitas Bina Sarana Informatika</h1>
+        <h2 style="margin-bottom: 10px;">Project Machine Learning</h2>
+        <h3 style="margin-bottom: 15px;">Estimasi Harga Mobil Bekas</h3>
         <p><b>Menggunakan Algoritma:</b></p>
-        <ul style="list-style: none; padding: 0;">
+        <ul style="list-style: none; padding: 0; margin-bottom: 15px;">
             <li>- Linear Regression</li>
             <li>- Decision Tree Regressor</li>
             <li>- Deployment di Streamlit</li>
         </ul>
         <p><b>Oleh:</b></p>
-        <p>Muh Bintang Mahardani (17225123)</p>
-        <p>Taufiq Ismail (17215032)</p>
+        <p style="margin: 0;">Muh Bintang Mahardani (17225123)</p>
+        <p style="margin: 0;">Taufiq Ismail (17215032)</p>
     </div>
     """,
     unsafe_allow_html=True
 )
+
 
 # Input data dari pengguna
 st.write("### Masukkan Data Mobil")
