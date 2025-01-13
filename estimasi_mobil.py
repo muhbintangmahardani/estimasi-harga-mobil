@@ -4,6 +4,25 @@ import streamlit as st
 # Load model
 model = pickle.load(open('estimasi_mobil.sav', 'rb'))
 
+# Menambahkan background gambar
+def add_bg_from_local(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded_image = image_file.read()
+    bg_style = f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/png;base64,{encoded_image.hex()}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }}
+        </style>
+    """
+    st.markdown(bg_style, unsafe_allow_html=True)
+
+# Panggil fungsi untuk menambahkan background
+add_bg_from_local("/mnt/data/mobil.png")
+
 # Judul Aplikasi
 st.markdown(
     """
@@ -11,6 +30,13 @@ st.markdown(
         <h1>Universitas Bina Sarana Informatika</h1>
         <h2>Project Machine Learning</h2>
         <h3>Estimasi Harga Mobil Bekas</h3>
+        <p><b>Menggunakan Algoritma:</b></p>
+        <ul style="list-style: none; padding: 0;">
+            <li>- Linear Regression</li>
+            <li>- Decision Tree Regressor</li>
+            <li>- Deployment di Streamlit</li>
+        </ul>
+        <p><b>Oleh:</b></p>
         <p>Muh Bintang Mahardani (17225123)</p>
         <p>Taufiq Ismail (17215032)</p>
     </div>
