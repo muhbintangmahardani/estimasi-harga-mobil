@@ -11,7 +11,6 @@ st.markdown(
         <h1>Universitas Bina Sarana Informatika</h1>
         <h2>Project Machine Learning</h2>
         <h3>Estimasi Harga Mobil Bekas</h3>
-        <p><b>Oleh:</b></p>
         <p>Muh Bintang Mahardani (17225123)</p>
         <p>Taufiq Ismail (17215032)</p>
     </div>
