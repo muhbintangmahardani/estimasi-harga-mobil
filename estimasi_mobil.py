@@ -27,8 +27,7 @@ st.markdown(
     """
     <div style="text-align: center;">
         <h1 style="margin-bottom: 10px;">Universitas Bina Sarana Informatika</h1>
-        <h2 style="margin-bottom: 10px;">Project Machine Learning</h2>
-        <h3 style="margin-bottom: 20px;">Estimasi Harga Mobil Bekas</h3>
+        <h2 style="margin-bottom: 10px;">Project Machine Learning - Estimasi Harga Mobil Bekas</h2>
     </div>
     <div style="text-align: left;">
         <p><b>Menggunakan Algoritma:</b></p>
