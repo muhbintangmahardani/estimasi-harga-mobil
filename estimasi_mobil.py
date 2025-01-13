@@ -29,6 +29,8 @@ st.markdown(
         <h1 style="margin-bottom: 10px;">Universitas Bina Sarana Informatika</h1>
         <h2 style="margin-bottom: 10px;">Project Machine Learning</h2>
         <h3 style="margin-bottom: 20px;">Estimasi Harga Mobil Bekas</h3>
+    </div>
+    <div style="text-align: left;">
         <p><b>Menggunakan Algoritma:</b></p>
         <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
             <li>- Linear Regression</li>
