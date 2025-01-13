@@ -26,7 +26,7 @@ add_bg_from_url(image_url)
 st.markdown(
     """
     <div style="text-align: center;">
-        <h1 style="margin-bottom: 10px;">Universitas Bina Sarana Informatika</h1><b><h2 style="margin-bottom: 10px;">Project Machine Learning - Estimasi Harga Mobil Bekas</h2></b>
+        <h1 style="margin-bottom: 5px;">Universitas Bina Sarana Informatika</h1><b><h2 style="margin-bottom: 5px;">Project Machine Learning - Estimasi Harga Mobil Bekas</h2></b>
     </div>
     <div style="text-align: left;">
         <p><b>Menggunakan Algoritma:</b></p>
