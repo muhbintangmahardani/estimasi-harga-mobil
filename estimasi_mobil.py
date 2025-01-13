@@ -4,14 +4,12 @@ import streamlit as st
 # Load model
 model = pickle.load(open('estimasi_mobil.sav', 'rb'))
 
-# Menambahkan background gambar
-def add_bg_from_local(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded_image = image_file.read()
+# Menambahkan background gambar dari URL
+def add_bg_from_url(image_url):
     bg_style = f"""
         <style>
         .stApp {{
-            background-image: url("data:image/png;base64,{encoded_image.hex()}");
+            background-image: url("{image_url}");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -20,8 +18,9 @@ def add_bg_from_local(image_path):
     """
     st.markdown(bg_style, unsafe_allow_html=True)
 
-# Panggil fungsi untuk menambahkan background
-add_bg_from_local("/mnt/data/mobil.png")
+# Masukkan URL gambar dari GitHub
+image_url = "https://raw.githubusercontent.com/username/repository/branch/path/to/mobil.png"
+add_bg_from_url(image_url)
 
 # Judul Aplikasi
 st.markdown(
