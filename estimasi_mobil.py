@@ -26,11 +26,11 @@ add_bg_from_url(image_url)
 st.markdown(
     """
     <div style="text-align: center;">
-        <h1 style="margin-bottom: 5px;">Universitas Bina Sarana Informatika</h1>
+        <h1 style="margin-bottom: 10px;">Universitas Bina Sarana Informatika</h1>
         <h2 style="margin-bottom: 10px;">Project Machine Learning</h2>
-        <h3 style="margin-bottom: 15px;">Estimasi Harga Mobil Bekas</h3>
+        <h3 style="margin-bottom: 20px;">Estimasi Harga Mobil Bekas</h3>
         <p><b>Menggunakan Algoritma:</b></p>
-        <ul style="list-style: none; padding: 0; margin-bottom: 15px;">
+        <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
             <li>- Linear Regression</li>
             <li>- Decision Tree Regressor</li>
             <li>- Deployment di Streamlit</li>
@@ -42,7 +42,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 # Input data dari pengguna
 st.write("### Masukkan Data Mobil")
@@ -65,5 +64,5 @@ if inputs_filled:
         [[year, mileage, tax, mpg, engineSize]]
     )
     st.write('### Hasil Estimasi')
-    st.write(f'Estimasi harga mobil bekas dalam Pounds: **£{int(predict[0]):,}**')
+    st.write(f'Estimasi harga mobil bekas dalam Pounds: **\u00a3{int(predict[0]):,}**')
     st.write(f'Estimasi harga mobil bekas dalam IDR (Juta): **Rp{int(predict[0] * 19000) / 1_000_000:,} Juta**')
